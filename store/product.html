@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هدفون بی‌سیم Aurora X1 | پیکسل‌کالا</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container-narrow d-flex align-items-center justify-content-between py-3">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">پ</span>
+      پیکسل‌کالا
+    </a>
+    <nav class="main-nav d-none d-lg-flex gap-4">
+      <a href="index.html">خانه</a>
+      <a href="index.html#products">محصولات</a>
+      <a href="product.html">ویژگی‌ها</a>
+      <a href="dashboard.html">داشبورد</a>
+      <a href="#">تماس با ما</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2">
+      <a href="#" class="icon-btn d-none d-sm-inline-flex">🔍</a>
+      <a href="#" class="icon-btn">🛒<span class="badge-dot"></span></a>
+      <a href="dashboard.html" class="btn-accent d-none d-md-inline-flex">ورود به داشبورد</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-narrow py-4" id=" productDetailsContainer ">
+  <div class="breadcrumb-min mb-4">
+    <a href="index.html">خانه</a> ›
+    <a href="index.html#products">محصولات</a> ›
+    <span id="breadcrumbCategory">...</span> ›
+    <span id="breadcrumbName">...</span>
+  </div>
+
+  <!-- گالری + اطلاعات اصلی -->
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <div class="gallery-main mb-3">
+        <img id="mainImage" src="" alt="تصویر محصول">
+      </div>
+      <!-- تامبنیل‌ها با js/product.js از روی آرایه‌ی images محصول ساخته می‌شن -->
+      <div class="row g-2" id="galleryThumbs">
+
+      </div>
+    </div>
+
+    <div class="col-lg-6" id="productDetails">
+      <div class="eyebrow mb-2" id="productBrand">...</div>
+      <h1 class="h2 mb-2" id="productName">در حال بارگذاری...</h1>
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="stars" id="productStars">☆☆☆☆☆</span>
+        <span class="text-muted small" id="productRatingText"></span>
+      </div>
+      <p class="lede mb-4" style="max-width:100%" id="productDescription"></p>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="price fs-3" id="productPrice">—</span>
+        <span class="price-old" id="productOldPrice"></span>
+        <span class="tag-flag" style="position:static" id="discountFlag" hidden></span>
+      </div>
+
+      <!-- سواچ‌های رنگ از روی آرایه‌ی colors محصول ساخته می‌شن -->
+      <div class="mb-4" id="colorSection" hidden>
+        <div class="fw-bold small mb-2">رنگ</div>
+        <div class="d-flex gap-2" id="colorSwatches"></div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <div class="qty-stepper">
+          <button type="button" id="qtyMinus">−</button>
+          <span id="qtyValue">۱</span>
+          <button type="button" id="qtyPlus">+</button>
+        </div>
+        <button class="btn-accent flex-grow-1 justify-content-center" id="addToCartBtn" data-bs-toggle="modal" data-bs-target="#orderModal">افزودن به سبد خرید</button>
+        <button class="icon-btn">♡</button>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2">
+        <span class="spec-pill">🚚 ارسال رایگان</span>
+        <span class="spec-pill">🛡️ ۱۸ ماه گارانتی</span>
+        <span class="spec-pill">↩️ ۷ روز ضمانت بازگشت</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- تب‌ها: توضیحات / مشخصات / نظرات -->
+  <div class="mt-5">
+    <ul class="nav nav-tabs" id="productTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-desc" type="button">توضیحات</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-specs" type="button">مشخصات فنی</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-reviews" type="button">نظرات (<span id="reviewsTabCount">۰</span>)</button></li>
+    </ul>
+    <div class="tab-content py-4">
+
+      <div class="tab-pane fade show active" id="tab-desc">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <p class="lede mb-3" style="max-width:100%" id="productDescriptionFull"></p>
+            <!-- ویژگی‌های برجسته: از روی چند مشخصه‌ی اول محصول ساخته می‌شه -->
+            <div id="featureLines"></div>
+          </div>
+          <div class="col-lg-6">
+            <img id="descImage" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=700&q=80" class="w-100 rounded-4" alt="جزئیات محصول">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="tab-specs">
+        <div class="row">
+          <div class="col-lg-7">
+            <table class="spec-table" id="specsTable">
+              <tr><td colspan="2" class="text-muted">در حال بارگذاری مشخصات...</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="tab-reviews">
+        <p class="text-muted">هنوز نظری برای نمایش انتخاب نشده — این بخش برای اتصال به سیستم نظرات آماده است.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- محصولات مرتبط -->
+  <div class="mt-5">
+    <h2 class="h4 mb-4">محصولات مشابه</h2>
+    <!-- این div رو js/product.js از روی endpoint /products/:id/related پر می‌کنه -->
+    <div class="row g-4" id="relatedProducts"></div>
+  </div>
+</div>
+
+<!-- مودال ثبت سفارش (بعد از زدن «افزودن به سبد خرید» باز می‌شه) -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form id="orderForm">
+        <div class="modal-header">
+          <h5 class="modal-title">تکمیل سفارش</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="orderFormError" class="alert alert-danger py-2 small" hidden></div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">نام و نام‌خانوادگی</label>
+            <input type="text" class="form-control" id="orderName" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">شماره تماس</label>
+            <input type="tel" class="form-control" id="orderPhone" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">آدرس</label>
+            <textarea class="form-control" id="orderAddress" rows="2" required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-accent" id="orderSubmitBtn">ثبت سفارش</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer py-5 mt-5">
+  <div class="container-narrow d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <div class="footer-brand">پیکسل‌کالا</div>
+    <div class="small" style="color:rgba(255,255,255,.5)">© ۱۴۰۴ پیکسل‌کالا. تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/productDetails.js" type="module"></script>
+</body>
+</html>

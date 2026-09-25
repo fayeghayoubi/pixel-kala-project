@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیکسل‌کالا | فروشگاه لوازم الکترونیکی و دیجیتال</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- هدر -->
+<header class="site-header">
+  <div class="container-narrow d-flex align-items-center justify-content-between py-3">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">پ</span>
+      پیکسل‌کالا
+    </a>
+    <nav class="main-nav d-none d-lg-flex gap-4">
+      <a href="index.html">خانه</a>
+      <a href="index.html#products">محصولات</a>
+      <a href="product.html">ویژگی‌ها</a>
+      <a href="dashboard.html">داشبورد</a>
+      <a href="#">تماس با ما</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2">
+      <a href="#" class="icon-btn d-none d-sm-inline-flex">🔍</a>
+      <a href="#" class="icon-btn">🛒<span class="badge-dot"></span></a>
+      <a href="#" class="btn-accent d-none d-md-inline-flex" id="main-header__profile"> 
+        <span> ثبت نام /ورود</span>  
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- هیرو -->
+<section class="hero">
+  <div class="container-narrow py-5">
+    <div class="row align-items-center g-5 py-4">
+      <div class="col-lg-6">
+        <div class="eyebrow mb-3" style="color:#8fe6bb">نسل تازه‌ی گجت‌های هوشمند</div>
+        <h1 class="display-headline mb-3">فناوری که با ریتم زندگی‌ات هماهنگ می‌شود</h1>
+        <p class="lede mb-4">از هدفون‌های بی‌صدا تا لپ‌تاپ‌های حرفه‌ای؛ محصولاتی که تست شده‌اند تا در کار روزمره واقعاً به‌کارت بیایند، نه فقط توی جعبه خوب به‌نظر برسند.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#products" class="btn-accent">مشاهده محصولات</a>
+          <a href="product.html" class="btn-outline-ink" style="border-color:rgba(255,255,255,.4); color:#fff;">جزئیات و ویژگی‌ها</a>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="spec-pill">۱۸ ماه گارانتی</span>
+          <span class="spec-pill">ارسال رایگان بالای ۲ میلیون</span>
+          <span class="spec-pill">۷ روز ضمانت بازگشت</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-figure">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=80" alt="نمایی از گجت‌های الکترونیکی">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- دسته‌بندی‌ها -->
+<section class="py-5">
+  <div class="container-narrow">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <h2 class="h3">دسته‌بندی محصولات</h2>
+      <a href="#products" class="text-decoration-underline small">مشاهده همه</a>
+    </div>
+    <!-- این div رو جاوااسکریپت (js/home.js) با داده‌ی واقعی از بک‌اند پر می‌کنه -->
+    <div class="row g-3" id="categoriesGrid">
+      <div class="col-12 text-muted small">در حال بارگذاری دسته‌بندی‌ها...</div>
+    </div>
+  </div>
+</section>
+
+<!-- محصولات پرفروش -->
+<section id="products" class="py-5">
+  <div class="container-narrow">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <h2 class="h3 mb-1">پرفروش‌های این هفته</h2>
+        <p class="lede mb-0">انتخاب‌هایی که بیشترین بازخورد مثبت را از مشتری‌ها گرفته‌اند.</p>
+      </div>
+    </div>
+    <!-- این div رو جاوااسکریپت (js/home.js) با محصولات واقعی از بک‌اند پر می‌کنه -->
+    <div class="row g-4" id="featuredProducts">
+      <div class="col-12 text-muted small">در حال بارگذاری محصولات...</div>
+    </div>
+  </div>
+</section>
+
+<!-- چرا پیکسل‌کالا -->
+<section class="py-5" style="background:var(--paper-dim)">
+  <div class="container-narrow py-3">
+    <h2 class="h3 mb-5">چرا از پیکسل‌کالا بخریم؟</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="usp-card">
+          <div class="usp-num mb-2">۰۱</div>
+          <h3 class="h5 mb-2">اصالت تضمینی</h3>
+          <p class="text-muted mb-0">هر محصول با کد رهگیری اصالت و گارانتی رسمی نمایندگی ارسال می‌شود.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="usp-card">
+          <div class="usp-num mb-2">۰۲</div>
+          <h3 class="h5 mb-2">تحویل سریع</h3>
+          <p class="text-muted mb-0">در تهران حداکثر ظرف ۲۴ ساعت و در سایر شهرها ۲ تا ۳ روز کاری.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="usp-card">
+          <div class="usp-num mb-2">۰۳</div>
+          <h3 class="h5 mb-2">پشتیبانی واقعی</h3>
+          <p class="text-muted mb-0">تیم پشتیبانی فنی، نه ربات پاسخ‌گو — از ۹ صبح تا ۱۰ شب.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- خبرنامه -->
+<section class="py-5">
+  <div class="container-narrow">
+    <div class="p-4 p-md-5 rounded-4 d-flex flex-wrap justify-content-between align-items-center gap-3" style="background:var(--ink); color:#fff;">
+      <div>
+        <h3 class="h4 mb-1">اولین نفری باش که از تخفیف‌ها خبردار می‌شه</h3>
+        <p class="mb-0" style="color:rgba(255,255,255,.65)">بدون ایمیل‌های مزاحم، فقط وقتی چیزی واقعاً ارزش خبر دادن داره.</p>
+      </div>
+      <form class="d-flex gap-2 flex-wrap">
+        <input type="email" class="form-control" placeholder="ایمیل شما" style="min-width:220px; border-radius:999px;">
+        <button class="btn-accent" type="submit">عضویت</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- فوتر -->
+<footer class="site-footer py-5">
+  <div class="container-narrow">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="footer-brand mb-2">پیکسل‌کالا</div>
+        <p class="small mb-0">فروشگاه تخصصی لوازم الکترونیکی و دیجیتال، از سال ۱۴۰۰.</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="fw-bold text-white mb-2 small">فروشگاه</div>
+        <div class="d-flex flex-column gap-2 small">
+          <a href="index.html#products">محصولات</a>
+          <a href="product.html">ویژگی‌ها</a>
+          <a href="#">تخفیف‌ها</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="fw-bold text-white mb-2 small">پشتیبانی</div>
+        <div class="d-flex flex-column gap-2 small">
+          <a href="#">پیگیری سفارش</a>
+          <a href="#">گارانتی</a>
+          <a href="#">تماس با ما</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="fw-bold text-white mb-2 small">ما را دنبال کنید</div>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn" style="background:transparent; border-color:rgba(255,255,255,.2); color:#fff;">📸</a>
+          <a href="#" class="icon-btn" style="background:transparent; border-color:rgba(255,255,255,.2); color:#fff;">🐦</a>
+          <a href="#" class="icon-btn" style="background:transparent; border-color:rgba(255,255,255,.2); color:#fff;">✉️</a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.12)" class="my-4">
+    <div class="small" style="color:rgba(255,255,255,.5)">© ۱۴۰۴ پیکسل‌کالا. تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="js/utils.js" type="module"></script>
+<script src="js/shared.js" type="module"></script>
+<script src="js/register.js" type="module"></script>
+
+</body>
+</html>
